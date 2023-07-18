@@ -29,11 +29,20 @@ if(navButton){
             left=-navWidth;
             moveNavRight();
         }
-        // else{
-        //     left=0;
-        //     moveNavLeft();
+        //  else{
+        // //     left=0;
+        // //     moveNavLeft();
+
 
         // }
+    })
+    document.addEventListener('click',(event)=>{
+        navBar=document.getElementById('navBar');
+        initialLeft=navBar.offsetLeft;
+        if(initialLeft>=0){
+            left=0;
+            moveNavLeft();
+        }
     })
 }
 
@@ -94,10 +103,7 @@ if(navContact){
     })
 }
 
-document.addEventListener('click',(event)=>{
-    left=0;
-    moveNavLeft();
-})
+
 
 let home= document.getElementById("home-button");
 if(home){
